@@ -12,7 +12,7 @@ interface GameDao {
     /**
      * get all the games from room db
      */
-    @Query("SELECT * FROM game")
+    @Query("SELECT * FROM game ORDER BY date")
     fun getGames(): LiveData<List<Game>>
 
     /**

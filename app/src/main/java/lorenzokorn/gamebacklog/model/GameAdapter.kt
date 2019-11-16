@@ -1,11 +1,14 @@
 package lorenzokorn.gamebacklog.model
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.game_card.view.*
 import lorenzokorn.gamebacklog.R
+import java.text.SimpleDateFormat
 
 class GameAdapter(private var games: List<Game>) :
     RecyclerView.Adapter<GameAdapter.ViewHolder>() {
@@ -24,14 +27,13 @@ class GameAdapter(private var games: List<Game>) :
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val title: TextView = itemView.findViewById(R.id.game_title)
-        private val platform: TextView = itemView.findViewById(R.id.game_platform)
-        private val date: TextView = itemView.findViewById(R.id.game_date)
-
+        @SuppressLint("SimpleDateFormat")
         fun bind(game: Game) {
-            title.text = game.title
-            platform.text = game.platform
-            date.text = game.date.time.toString()
+            val releaseDate = SimpleDateFormat("dd MMMM yyyy").format(game.date)
+
+            itemView.game_title.text = game.title
+            itemView.game_platform.text = game.platform
+            itemView.game_date.text = releaseDate
         }
     }
 }

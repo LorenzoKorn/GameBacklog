@@ -9,9 +9,8 @@ import java.util.*
 @Parcelize
 @Entity(tableName = "game")
 data class Game(
-    val title: String,
-    val platform: String,
-    val date: Date,
-    @PrimaryKey(autoGenerate = true)
-    val id: Long? = null
-): Parcelable
+    var title: String,
+    var platform: String,
+    var date: Date,
+    @PrimaryKey(autoGenerate = true) val id: Long? = null
+) : Parcelable

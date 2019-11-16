@@ -10,4 +10,8 @@
     <string name="month_hint">Month</string>
     <string name="year_hint">Year</string>
     <!-- Custom layout -->
+    <!-- Errors -->
+    <string name="title_error">Please fill in a title</string>
+    <string name="platform_error">Please fill in a platform</string>
+    <string name="date_error">Please fill in a valid date</string>
 </resources>
