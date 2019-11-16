@@ -1,4 +1,4 @@
-package lorenzokorn.gamebacklog
+package lorenzokorn.gamebacklog.controller.main
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
+import lorenzokorn.gamebacklog.R
 
 class MainActivity : AppCompatActivity() {
 
