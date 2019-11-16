@@ -33,7 +33,7 @@ class GameAdapter(private var games: List<Game>) :
 
             itemView.game_title.text = game.title
             itemView.game_platform.text = game.platform
-            itemView.game_date.text = releaseDate
+            itemView.game_date.text = ("release date: $releaseDate")
         }
     }
 }
